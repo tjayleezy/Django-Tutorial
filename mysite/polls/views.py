@@ -20,6 +20,8 @@ def index(request):
 
 def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
+    if question.pub_date > timezone.now():
+        raise Http404("Question not found")
     return render(request, 'polls/detail.html',{'question': question})
     
 def results(request, question_id):
