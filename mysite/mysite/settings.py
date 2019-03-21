@@ -25,7 +25,7 @@ SECRET_KEY = 'wcqmb-)9pi@g=yun5520%i3+*$^jlb8_s@f7fkzgtlhx^zm=jn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://whispering-depths-38563.herokuapp.com']
 
 
 # Application definition
@@ -74,10 +74,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    'defaultold':   {
+    'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     },
+
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'polls',
@@ -86,6 +87,7 @@ DATABASES = {
         'HOST':'127.0.0.1',
     }
 }
+
 
 
 # Password validation
@@ -125,3 +127,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+import django_heroku
+django_heroku.settings(locals())
