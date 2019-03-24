@@ -25,7 +25,7 @@ SECRET_KEY = 'wcqmb-)9pi@g=yun5520%i3+*$^jlb8_s@f7fkzgtlhx^zm=jn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://whispering-depths-38563.herokuapp.com']
+ALLOWED_HOSTS = ['https://shrouded-reaches-79641.herokuapp.com']
 
 
 # Application definition
