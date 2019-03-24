@@ -1,0 +1,5 @@
+django
+mysql
+gunicorn
+django-heroku
+
